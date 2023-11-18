@@ -2,3 +2,9 @@
   text-align: center;
   padding: 20px 0;
 }
+
+.card-div {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+}
