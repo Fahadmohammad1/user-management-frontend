@@ -16,8 +16,8 @@ const Banner = () => {
           necessitatibus deleniti quae, aspernatur asperiores, autem perferendis
           sequi corporis optio incidunt molestias praesentium?
         </p>
-        <button className="cta-button">Call to Action</button>
-        <button className="cta-button secondary">Secondary Action</button>
+        <button className="cta-button">Make Team</button>
+        <button className="cta-button secondary">Login</button>
       </div>
     </section>
   );
