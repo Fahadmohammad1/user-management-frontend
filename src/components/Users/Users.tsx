@@ -10,7 +10,7 @@ const Users = () => {
     return <p>Loading...</p>;
   }
   return (
-    <section className="user-section">
+    <section className="user-section" id="users">
       <h1>Available Users</h1>
       <div className="card-div">
         {data?.data?.map((user) => (
