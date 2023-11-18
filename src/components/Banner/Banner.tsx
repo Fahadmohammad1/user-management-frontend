@@ -8,7 +8,14 @@ const Banner = () => {
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto,
           vel.
         </h1>
-        <p>Short description of the hero section goes here.</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt quos
+          rem, aut excepturi vitae minus? Illum, consequatur mollitia. Eligendi,
+          tempore corrupti! Commodi expedita ratione sequi assumenda laborum
+          deleniti pariatur? Beatae eos a sed at aliquid quasi non
+          necessitatibus deleniti quae, aspernatur asperiores, autem perferendis
+          sequi corporis optio incidunt molestias praesentium?
+        </p>
         <button className="cta-button">Call to Action</button>
         <button className="cta-button secondary">Secondary Action</button>
       </div>
