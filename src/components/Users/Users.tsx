@@ -6,6 +6,11 @@ import "./Users.css";
 const Users = () => {
   const [selectedOption, setSelectedOption] = useState("");
   const [isChecked, setChecked] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleSearch = (term: string) => {
+    setSearchTerm(term);
+  };
 
   const handleSelectChange = (e) => {
     setSelectedOption(e.target.value);
@@ -26,7 +31,15 @@ const Users = () => {
     <section className="user-section" id="users">
       <h1>Available Users</h1>
       <div className="filter-div">
-        <h4>filters : </h4>
+        <h4>Search : </h4>
+        <div className="search-container">
+          <input
+            type="text"
+            placeholder="Search..."
+            onChange={(e) => handleSearch(e.target.value)}
+          />
+        </div>
+        <h4>Filter : </h4>
         <div className="select-dropdown">
           <select
             className="select"

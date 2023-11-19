@@ -4,6 +4,7 @@ import Banner from "./components/Banner/Banner";
 import Navbar from "./components/Navbar/Navbar";
 import Users from "./components/Users/Users";
 import { setUser } from "./redux/features/user/userSlice";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   const dispatch = useDispatch();
@@ -23,6 +24,7 @@ function App() {
       <Navbar />
       <Banner />
       <Users />
+      <Toaster />
     </>
   );
 }
