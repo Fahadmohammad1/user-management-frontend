@@ -6,7 +6,6 @@ import "./Users.css";
 const Users = () => {
   const [selectedOption, setSelectedOption] = useState("");
   const [isChecked, setChecked] = useState(false);
-  console.log(isChecked);
 
   const handleSelectChange = (e) => {
     setSelectedOption(e.target.value);
@@ -82,8 +81,8 @@ const Users = () => {
         </div>
       </div>
       <div className="card-div">
-        {data?.data?.map((user) => (
-          <UserCard key={user.id} user={user} />
+        {data?.data?.map((userData) => (
+          <UserCard key={userData.id} userData={userData} />
         ))}
       </div>
     </section>

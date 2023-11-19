@@ -1,6 +1,8 @@
+import { useNavigate } from "react-router-dom";
 import "./Banner.css";
 
 const Banner = () => {
+  const navigate = useNavigate();
   return (
     <section className="hero">
       <div className="hero-content">
@@ -17,7 +19,12 @@ const Banner = () => {
           sequi corporis optio incidunt molestias praesentium?
         </p>
         <button className="cta-button">Make Team</button>
-        <button className="cta-button secondary">Login</button>
+        <button
+          className="cta-button secondary"
+          onClick={() => navigate("/login")}
+        >
+          Login
+        </button>
       </div>
     </section>
   );
