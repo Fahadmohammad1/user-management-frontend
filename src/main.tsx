@@ -9,15 +9,27 @@ import { store } from "./redux/store.ts";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import Login from "./components/Login/Login.tsx";
+import Team from "./components/Team/Team.tsx";
+import MainLayout from "./Layout/MainLayout.tsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
-  },
-  {
-    path: "/login",
-    element: <Login />,
+    element: <MainLayout />,
+    children: [
+      {
+        path: "/",
+        element: <App />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/team",
+        element: <Team />,
+      },
+    ],
   },
 ]);
 

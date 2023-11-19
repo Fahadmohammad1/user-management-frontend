@@ -18,14 +18,17 @@ const UserCard = ({ userData }) => {
         ownerEmail: user.email,
         members: [
           {
-            memberEmail: userInfo.email,
+            memberId: userInfo._id,
             name: userInfo.first_name + userInfo.last_name,
           },
         ],
       }).unwrap();
-      console.log(res);
-      if ((await res.data.acknowledged) || (await res.data._id)) {
+
+      if ((await res?.data?.acknowledged) || (await res?.data?._id)) {
         toast.success("Added to team");
+      }
+      if (res?.data?.Error) {
+        toast.error(res?.data?.Error);
       }
     }
   };
@@ -47,7 +50,7 @@ const UserCard = ({ userData }) => {
         <p className="card-property">Gender : {userData.gender}</p>
         <p className="card-property">Domain : {userData.domain}</p>
 
-        <button className="card-button" onClick={() => handleClick(user)}>
+        <button className="card-button" onClick={() => handleClick(userData)}>
           Add to team
         </button>
       </div>

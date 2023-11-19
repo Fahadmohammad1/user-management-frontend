@@ -11,7 +11,15 @@ export const teamApi = api.injectEndpoints({
         };
       },
     }),
+    teamMembers: build.query({
+      query: (email) => {
+        return {
+          url: `/team/${email}`,
+          method: "GET",
+        };
+      },
+    }),
   }),
 });
 
-export const { useCreateTeamMutation } = teamApi;
+export const { useCreateTeamMutation, useTeamMembersQuery } = teamApi;

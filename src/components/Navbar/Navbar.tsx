@@ -8,6 +8,17 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const { user } = useAppSelector((state) => state.user);
 
+  const userData: any = localStorage.getItem("user");
+  const userInfo = JSON.parse(userData);
+
+  dispatch(
+    setUser({
+      email: userInfo?.email,
+      first_name: userInfo?.first_name,
+      last_name: userInfo?.last_name,
+    })
+  );
+
   const handleLogout = () => {
     localStorage.removeItem("user");
     dispatch(
@@ -18,12 +29,13 @@ const Navbar = () => {
       })
     );
   };
+
   return (
     <div>
       <nav>
-        <a href="#home">Home</a>
+        <Link to="/">Home</Link>
         <a href="#about">About</a>
-        <a href="#services">Services</a>
+        <Link to="/team">My Team</Link>
         {user.email ? (
           <a href="" onClick={() => handleLogout()}>
             Logout
